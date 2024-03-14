@@ -10,15 +10,26 @@
   <body>
     <header></header>
     <main>
-      <button id="play">Play</button>
-      <div class="game-container">
-        <img id="fisher" src="./images/fisherman (1).png" alt="fisher" />
+      <div id="play-score">
+        <button id="play">Play</button>
+        <h1>You caught <span id="score">0</span>/10 scooters</h1>
+      </div>
+      <div id="game-container">
+        <img
+          id="fisher"
+          src="./images/—Pngtree—fishing fishing fishing woman woman_3922504.png"
+          alt="fisher"
+        />
         <div id="line">
           <div class="hook"></div>
         </div>
         <div id="canal"></div>
-        <div id="water"></div>
+        <div id="water"><img id="logo" src="./images/olympics.png" /></div>
       </div>
     </main>
+    <dialog id="modal">
+      <h1>Good job! You got all 10 scooters!</h1>
+      <button id="try-again">Try again</button>
+    </dialog>
   </body>
 </html>

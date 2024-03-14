@@ -3,19 +3,16 @@
 }
 
 body {
-  width: 100%;
+  margin: 0;
 }
 
 #game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
+  height: calc(100vh - 4rem);
 }
 
 #canal {
   background-color: transparent;
-  height: 400px;
+  height: 50%;
   background-size: cover;
   top: 0px;
   left: 0px;
@@ -23,10 +20,7 @@ body {
 
 #water {
   background-color: aqua;
-  position: absolute;
-  top: 400px;
-  width: 100%;
-  height: 300px;
+  height: 50%;
   z-index: -1;
   border-top: 2px solid black;
 }
@@ -35,34 +29,54 @@ body {
   height: auto;
   width: 100px;
   z-index: 1;
-  top: 300px;
-  left: 49.4%;
+  top: 41%;
+  left: 49%;
   position: absolute;
 }
 
 .scooter {
-  position: relative;
+  position: absolute;
   height: 100px;
   width: 100px;
   top: 500px;
-  left: 200px;
+  left: 100vw;
   background-image: url("./images/lime-e-scooter-ipe.png");
   background-size: cover;
 }
 
 #line {
-  border-left: 2px solid black;
+  border-left: 1px solid black;
   height: 200px;
   position: absolute;
   left: 50%;
-  top: 310px;
+  top: 54%;
 }
 
 .hook {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: black;
   position: absolute;
   bottom: 0;
+}
+
+#play-score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 4rem;
+  align-items: center;
+}
+
+#play {
+  width: 200px;
+  height: 50px;
+}
+
+#logo {
+  height: 250px;
+  margin-left: 40%;
+  margin-top: 80px;
+  opacity: 50%;
 }

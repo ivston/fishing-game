@@ -1,16 +1,20 @@
 import Game from "./game.js";
 import Line from "./line.js";
 import Scooter from "./scooter.js";
-// const game = new Game();
 let game;
 let line;
 let scooters = [];
-let gameContainer = document.querySelector(".game-container");
+let gameContainer = document.querySelector("#game-container");
+let score = 0;
+let modal = document.getElementById("modal");
+let restart = document.getElementById("try-again");
 
 const playButton = document.getElementById("play");
 playButton.addEventListener("click", () => {
+  playButton.style.display = "none";
   game = new Game();
   line = new Line();
+  score = 0;
   for (let i = 0; i < 10; i++) {
     setTimeout(() => {
       const scooter = new Scooter(game.gameContainer);
@@ -36,36 +40,21 @@ gameContainer.addEventListener("click", (event) => {
       if (scooters[i].isStopped) {
         scooters[i].vanish();
         scooters.splice(i, 1);
+        document.getElementById("score").innerHTML = score += 1;
         break;
       }
     }
   }
+
+  if (score === 10) {
+    modal.showModal();
+  }
+
+  restart.addEventListener("click", (event) => {
+    modal.close();
+    score = 0;
+    document.getElementById("score").innerHTML = score;
+    playButton.disabled = false;
+    playButton.style.display = "block";
+  });
 });
-
-// function checkCollision() {
-//   this.scooters.forEach((scooter) => {
-//     // scooters reference
-
-//     const scooterRect = scooter.element.getBoundingClientRect();
-//     const lineRect = this.Line.element.getBoundingClientRect();
-//     const gameContainerRect = this.gameContainer.getBoundingClientRect();
-
-//     if (scooterRect.right < gameContainerRect.left) {
-//       // reset scooter once it goes out of frame
-//       scooter.position = {
-//         x: gameContainerRect.width,
-//         y: gameContainerRect.height - scooter.element.offsetHeight,
-//       };
-//       move();
-//     } else if (
-//       scooterRect.top === lineRect.bottom &&
-//       scooterRect.right === lineRect.right
-//     ) {
-//       clearInterval(intervalId);
-//       scooter.position = {
-//         x: lineRect.right,
-//         y: lineRect.bottom - scooter.element.offsetHeight,
-//       };
-//     } //link scooter y to line y
-//   });
-// }
