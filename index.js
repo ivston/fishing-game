@@ -58,3 +58,6 @@ gameContainer.addEventListener("click", (event) => {
     playButton.style.display = "block";
   });
 });
+
+
+// Github Actions issue.
