@@ -25,21 +25,28 @@ body {
   border-top: 2px solid black;
 }
 
-#fisher {
-  height: auto;
+.fisher-wrapper {
+  position: absolute;
+  height: 100px;
   width: 100px;
-  z-index: 1;
   top: 41%;
   left: 49%;
-  position: absolute;
+}
+
+#fisher {
+  width: 100px;
+  /*z-index: 1;
+  top: 41%;
+  left: 49%;
+  position: absolute; */
 }
 
 .scooter {
   position: absolute;
   height: 100px;
   width: 100px;
-  top: 500px;
-  left: 100vw;
+  /* top: 500px; */
+  /* left: 100vw; */
   background-image: url("./images/lime-e-scooter-ipe.png");
   background-size: cover;
 }
@@ -48,17 +55,19 @@ body {
   border-left: 1px solid black;
   height: 200px;
   position: absolute;
-  left: 50%;
-  top: 54%;
+  left: 7%;
+  top: 50%;
 }
 
 .hook {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background-color: black;
+  background-image: url(./images/fish-hook.png);
+  background-size: cover;
   position: absolute;
-  bottom: 0;
+  left: -10px;
+  bottom: -10px;
 }
 
 #play-score {
@@ -79,4 +88,5 @@ body {
   margin-left: 40%;
   margin-top: 80px;
   opacity: 50%;
+  z-index: -1;
 }
