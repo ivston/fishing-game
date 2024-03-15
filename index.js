@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   soundsGoodButton.addEventListener("click", function () {
     introDialog.close();
     enableGameInteraction();
-    modal.classList.toggle("hidden");
   });
 });
 
@@ -25,7 +24,7 @@ function enableGameInteraction() {
   playButton.disabled = false;
 
   playButton.addEventListener("click", () => {
-    modal.closeModal();
+    modal.close();
     playButton.style.display = "none";
     game = new Game();
     line = new Line();
@@ -65,7 +64,7 @@ function enableGameInteraction() {
     }
 
     restart.addEventListener("click", (event) => {
-      modal.closeModal();
+      modal.close();
       score = 0;
       document.getElementById("score").innerHTML = score;
       playButton.disabled = false;
