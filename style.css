@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -19,10 +20,11 @@ body {
 }
 
 #water {
-  background-color: aqua;
+  background-color: darkolivegreen;
+  opacity: 75%;
   height: 50%;
   z-index: -1;
-  border-top: 2px solid black;
+  border-top: 2px solid darkolivegreen;
 }
 
 .fisher-wrapper {
@@ -35,18 +37,12 @@ body {
 
 #fisher {
   width: 100px;
-  /*z-index: 1;
-  top: 41%;
-  left: 49%;
-  position: absolute; */
 }
 
 .scooter {
   position: absolute;
   height: 100px;
   width: 100px;
-  /* top: 500px; */
-  /* left: 100vw; */
   background-image: url("./images/lime-e-scooter-ipe.png");
   background-size: cover;
 }
@@ -57,6 +53,7 @@ body {
   position: absolute;
   left: 7%;
   top: 50%;
+  z-index: 1;
 }
 
 .hook {
@@ -68,6 +65,7 @@ body {
   position: absolute;
   left: -10px;
   bottom: -10px;
+  z-index: 1;
 }
 
 #play-score {
@@ -76,17 +74,79 @@ body {
   justify-content: space-around;
   height: 4rem;
   align-items: center;
+  color: grey;
 }
 
 #play {
   width: 200px;
   height: 50px;
+  border-color: darkolivegreen;
+  color: darkolivegreen;
+  border-radius: 25% 10%;
+  font-weight: bold;
 }
 
 #logo {
   height: 250px;
-  margin-left: 40%;
+  margin-left: 45%;
   margin-top: 80px;
   opacity: 50%;
   z-index: -1;
+}
+
+#intro {
+  text-align: center;
+  justify-content: center;
+  line-height: 2rem;
+  color: grey;
+  border-color: darkolivegreen;
+  & h1 {
+    color: darkolivegreen;
+  }
+  border-radius: 25% 10%;
+}
+
+#sounds-good {
+  border-color: darkolivegreen;
+  color: darkolivegreen;
+  border-radius: 25% 10%;
+}
+
+#span {
+  font-weight: bold;
+  color: darkolivegreen;
+}
+
+#annie {
+  line-height: normal;
+  font-weight: bold;
+}
+
+#modal {
+  text-align: center;
+  justify-content: center;
+  line-height: 2rem;
+  color: grey;
+  border-color: darkolivegreen;
+  border-radius: 25% 10%;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 700px;
+}
+
+#try-again {
+  border-color: darkolivegreen;
+  color: darkolivegreen;
+  border-radius: 25% 10%;
+  width: 150px;
+  margin: 0 auto;
+}
+
+#credit {
+  font-size: 0.5rem;
+}
+
+.hidden {
+  display: none;
 }

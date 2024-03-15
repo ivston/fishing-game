@@ -40,12 +40,12 @@ class Scooter {
     const scooterBoundaries = this.element.getBoundingClientRect();
 
     const isInX =
-      hookBoundaries.right > scooterBoundaries.left &&
-      hookBoundaries.left < scooterBoundaries.right;
+      hookBoundaries.right > scooterBoundaries.left + 40 &&
+      hookBoundaries.left < scooterBoundaries.right - 40;
 
     const isInY =
-      hookBoundaries.bottom > scooterBoundaries.top &&
-      hookBoundaries.top < scooterBoundaries.bottom;
+      hookBoundaries.bottom > scooterBoundaries.top + 20 &&
+      hookBoundaries.top < scooterBoundaries.bottom - 20;
 
     if (isInX && isInY) {
       clearInterval(this.intervalId);
