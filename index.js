@@ -10,6 +10,7 @@ let modal = document.getElementById("modal");
 let restart = document.getElementById("try-again");
 let introDialog = document.getElementById("intro");
 let soundsGoodButton = document.getElementById("sounds-good");
+const water = document.getElementById("water");
 
 document.addEventListener("DOMContentLoaded", function () {
   introDialog.showModal();
@@ -60,6 +61,7 @@ function enableGameInteraction() {
       }
       if (score === 10) {
         modal.showModal();
+        water.classList = "water-end";
       }
     }
 
@@ -69,6 +71,7 @@ function enableGameInteraction() {
       document.getElementById("score").innerHTML = score;
       playButton.disabled = false;
       playButton.style.display = "block";
+      water.classList = "water-before";
     });
   });
 }

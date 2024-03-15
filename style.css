@@ -20,11 +20,19 @@ body {
 }
 
 #water {
-  background-color: darkolivegreen;
   opacity: 75%;
   height: 50%;
   z-index: -1;
+}
+
+.water-before {
+  background-color: darkolivegreen;
   border-top: 2px solid darkolivegreen;
+}
+
+.water-end {
+  background-color: aqua;
+  border-top: 2px solid aqua;
 }
 
 .fisher-wrapper {
