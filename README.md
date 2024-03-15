@@ -17,5 +17,5 @@ My idea was to have a very stripped down look and game logic in order to really 
 * Adding more elements in the water: things to avoid, bonus items etc.
 * Eliminating small bugs (flashing scooter)
 
-* Try it out!
-*  https://ivston.github.io/fishing-game/
+**Try it out!**
+https://ivston.github.io/fishing-game/
