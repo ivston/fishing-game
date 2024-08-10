@@ -1,4 +1,4 @@
-**Fishing with Annie by Ivan STOYANOV**
+**Fishing with Anne by Ivan STOYANOV**
 
 **Why I choose this game?**
 
